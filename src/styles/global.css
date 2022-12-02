@@ -3,15 +3,6 @@ html {
   width: auto;
 }
 
-.icon {
-  color: lime;
-  font-size: 40px;
-}
-
-.newClass {
-  font-family: 'Courier New', Courier, monospace;
-}
-
 .center {
   display: flex;
   justify-content: center;

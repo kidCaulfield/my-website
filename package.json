@@ -16,7 +16,6 @@
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
-    "dompurify": "^2.4.1",
     "gatsby": "^5.2.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
