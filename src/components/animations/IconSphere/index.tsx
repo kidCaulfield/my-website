@@ -4,7 +4,12 @@ import TagCloud from "TagCloud";
 // @ts-ignore
 import { icon } from './iconSphere.module.css'
 
-const IconSphere = () => {
+type IconSphereProps = {
+  radius: number
+}
+
+const IconSphere = ({radius}:IconSphereProps) => {
+  // improve these names later
   const ref = useRef(null);
   const IsTagCloudLoaded = useRef(false);
 
@@ -38,7 +43,7 @@ const IconSphere = () => {
     if (IsTagCloudLoaded.current && ref.current) return;
 
     TagCloud(".icon-sphere", Array(icons.length).fill(""), {
-      radius: 300,
+      radius: radius,
       maxSpeed: "fast",
       initSpeed: "fast",
       direction: 135,
@@ -49,6 +54,7 @@ const IconSphere = () => {
     ref.current.childNodes[0].childNodes.forEach((e, i) =>
       e.setAttribute("class", icons[i])
     );
+
     IsTagCloudLoaded.current = true;
   }, []);
 

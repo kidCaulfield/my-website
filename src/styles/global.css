@@ -1,10 +1,67 @@
 html {
-  background-color: black;
   width: auto;
+}
+
+h1 {
+  margin: 0px
+}
+
+p {
+  margin: 0px
+}
+
+.bg-crimson {
+  border: 5px solid crimson;
+  max-width: 500px;
+}
+
+.helvetica {
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+body {
+  margin: 0px;
 }
 
 .center {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+}
+
+.hero {
+  height: 100vh;
+  width: 100vw;
+  border: 0px;
+  background-color: black;
+}
+
+.white {
+  color: white;
+}
+
+.hide {
+  left: -300px;
+  opacity: 0;
+  transition: 500ms;
+}
+
+.animate-left-in {
+  left: 0;
+  opacity: 1;
+  position: relative;
+  transition: 500ms;
+}
+
+.animate-left-in-slow {
+  left: 0;
+  opacity: 1;
+  position: relative;
+  transition: 500ms;
+  transition-delay: 700ms;
 }
