@@ -1,7 +1,18 @@
-export function useStyleCss(css): string {
-  return css.split(";").reduce((acc, curr) => {
-    const [key, val] = curr.trim().split(":");
+import {camelCase} from "lodash";
+import { useEffect, useState } from "react";
 
-    return !!key ? { ...acc, [key]: val } : acc;
-  }, {});
+export function useStyleCss(css: string) {
+  const [styles, setStyles] = useState({})
+
+  useEffect(() => {
+    if (css) {
+      setStyles(css.split(";").reduce((acc: object, curr: string) => {
+        const [key, val] = curr.trim().split(":");
+    
+        return !!key ? { ...acc, [camelCase(key)]: val } : acc;
+      }, {}))
+    }
+  })
+
+  return styles;
 }

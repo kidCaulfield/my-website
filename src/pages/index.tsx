@@ -18,27 +18,49 @@ const IndexPage: React.FC<PageProps> = () => {
       <section className="hero center column">
         <div>
           <Reveal
+            transition={{
+              from: ["hide-left"],
+              to: ["white", "animate-left-in", "helvetica"],
+            }}
             options={{
               root: null,
               rootMargin: "-50px",
               threshold: 1,
-              transition: ["white", "animate-left-in", "helvetica"],
             }}
           >
             <h1>Skills</h1>
             <Reveal
+              transition={{
+                from: ["hide-left"],
+                to: ["white", "animate-left-in-slow", "helvetica"],
+              }}
               options={{
                 root: null,
                 rootMargin: "0px",
                 threshold: 1,
-                transition: ["white", "animate-left-in-slow", "helvetica"]
               }}
             >
-              <div className="bg-crimson"/>
+              <div className="bg-crimson" />
             </Reveal>
-
           </Reveal>
-          <div className="hide white">heloo</div>
+          <Reveal
+            transition={{
+              from: ["hide-left"],
+              to: ["white", "animate-left-in-slower", "helvetica"],
+            }}
+            options={{
+              root: null,
+              rootMargin: "0px",
+              threshold: 1,
+            }}
+          >
+            <p>
+              Building simple to use and easy to maintain API. Responsive and
+              engaging Frontend Interfaces with Function design. Creating data
+              models best suited for project intentions and Configuring web
+              servers in Cloud environments
+            </p>
+          </Reveal>
         </div>
       </section>
     </main>

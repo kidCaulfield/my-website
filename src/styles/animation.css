@@ -1,0 +1,41 @@
+.hide-left {
+  left: -300px;
+  opacity: 0;
+  transition: 500ms;
+}
+
+.animate-left-in {
+  left: 0;
+  opacity: 1;
+  position: relative;
+  transition: 500ms;
+}
+
+.animate-left-in-slow {
+  left: 0;
+  opacity: 1;
+  position: relative;
+  transition: 500ms;
+  transition-delay: 250ms;
+}
+
+.animate-left-in-slower {
+  left: 0;
+  opacity: 1;
+  position: relative;
+  transition: 500ms;
+  transition-delay: 500ms;
+}
+
+/* .hide-bottom {
+  margin-top: 100px;
+  opacity: 0;
+  transition: 500ms;
+}
+
+.animate-bottom-in-slow {
+  margin-top: 0px;
+  opacity: 1;
+  position: relative;
+  transition: 1000ms;
+} */
