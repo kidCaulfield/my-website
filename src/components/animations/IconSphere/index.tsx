@@ -9,9 +9,8 @@ type IconSphereProps = {
 }
 
 const IconSphere = ({radius}:IconSphereProps) => {
-  // improve these names later
   const ref = useRef(null);
-  const IsTagCloudLoaded = useRef(false);
+  const isTagCloudLoaded = useRef(false);
 
   useEffect(() => {
     const icons = [
@@ -40,7 +39,7 @@ const IconSphere = ({radius}:IconSphereProps) => {
     ];
 
 
-    if (IsTagCloudLoaded.current && ref.current) return;
+    if (isTagCloudLoaded.current && ref.current) return;
 
     TagCloud(".icon-sphere", Array(icons.length).fill(""), {
       radius: radius,
@@ -55,7 +54,7 @@ const IconSphere = ({radius}:IconSphereProps) => {
       e.setAttribute("class", icons[i])
     );
 
-    IsTagCloudLoaded.current = true;
+    isTagCloudLoaded.current = true;
   }, []);
 
   return (
