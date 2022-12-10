@@ -4,6 +4,7 @@ import "../styles/global.css";
 import IconSphere from "../components/animations/IconSphere";
 import Skills from "../components/Article/Skills";
 import Cover from "../components/Article/Cover";
+import Contact from "../components/Article/Contact";
 
 const IndexPage: React.FC<PageProps> = () => {
   return (
@@ -14,66 +15,10 @@ const IndexPage: React.FC<PageProps> = () => {
       <section id="skills" className="hero center">
         <div className="container">
           <Skills />
-          <IconSphere radius={300} />
+          {/* <IconSphere radius={300} /> */}
         </div>
       </section>
-      <section
-        id="contact"
-        className="hero center column"
-        style={{ justifyContent: "space-evenly" }}
-      >
-        <h1 className="white pacifico">Contact</h1>
-        {/* <h2 id="resume" onClick={showResume}>
-          View Resume
-          <br />
-          <i className="i fas fa-scroll"></i>
-        </h2> */}
-        {/* <iframe
-          title="resume"
-          className="view-resume close"
-          src="https://drive.google.com/file/d/1DQtMs6bryRiER1p_Bh7DL8VJgLOzNajz/preview"
-        ></iframe> */}
-        <a
-          href="https://github.com/kidCaulfield"
-          className="link"
-          aria-label="git"
-        >
-          <i className="i fab fa-github white" alt="github icon"></i>
-        </a>
-        <a
-          href="https://www.linkedin.com/in/wesley-coderre/"
-          className="link"
-          aria-label="linkedin"
-        >
-          <i className="i fab fa-linkedin white" alt="Linked In icon"></i>
-        </a>
-        <a
-          href="mailto:wesley.coderre@gmail.com"
-          className="link"
-          aria-label="mail"
-          style={{
-            display: "flex",
-            flexDirection: "column",
-            alignItems: "center",
-            textDecoration: "none",
-          }}
-        >
-          <i
-            className="i fas fa-paper-plane white"
-            alt="paper airplane email icon"
-          />
-          <p
-            style={{
-              fontSize: "1.2em",
-              margin: "50px 0px 30px 0px",
-              fontFamily: "Helvetica",
-              color: "white",
-            }}
-          >
-            wesley.coderre@gmail.com
-          </p>
-        </a>
-      </section>
+      <Contact />
     </main>
   );
 };
@@ -102,6 +47,14 @@ export const Head: HeadFC = () => (
       type="font/truetype"
       crossOrigin="anonymous"
       key="pacifico-regular"
+    />
+    <link
+      rel="preload"
+      href="/fonts/Pattaya/Pattaya-Regular.ttf"
+      as="font"
+      type="font/truetype"
+      crossOrigin="anonymous"
+      key="pattaya-regular"
     />
     <script src="https://kit.fontawesome.com/711dae3be5.js"></script>
   </>

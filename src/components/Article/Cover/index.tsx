@@ -20,13 +20,13 @@ export default function Cover() {
   }, [scrollY]);
 
   return (
-    <div ref={titleRef} className={container}>
+    <article ref={titleRef} className={container}>
       <h1 className={heading}>Wes Coderre</h1>
       <div>
         <div className={typewriter}>
           <h1 className={typewriterH1}>Developer & Designer</h1>
         </div>
       </div>
-    </div>
+    </article>
   );
 }
