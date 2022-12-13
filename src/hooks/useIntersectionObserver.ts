@@ -1,4 +1,4 @@
-import { useRef, useEffect } from "react";
+import { useRef, useEffect, useState } from "react";
 
 /**
  * @param options IntersectionObserver api options
@@ -6,11 +6,21 @@ import { useRef, useEffect } from "react";
  * @returns {[containerRef]} react ref
  */
 
-export const useIntersectionObserver = (options: object, callback: any) => {
+export const useIntersectionObserver = (
+  callback: any = (e: any) => e,
+  options: object = {
+    root: null,
+    rootMargin: "0px",
+    threshold: 0,
+  }
+) => {
+  const [trigger, setTrigger] = useState();
   const containerRef = useRef(null);
 
   const getRef = (entries: any) => {
-    callback(entries);
+    const [entry] = entries;
+    callback(entry);
+    if (entry.isIntersecting) setTrigger(true);
   };
 
   useEffect(() => {
@@ -22,5 +32,5 @@ export const useIntersectionObserver = (options: object, callback: any) => {
     };
   }, []);
 
-  return [containerRef];
+  return [containerRef, trigger];
 };

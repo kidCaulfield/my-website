@@ -1,5 +1,4 @@
-import React, { useEffect, useRef } from "react";
-import { useScroll } from "../../../hooks/useScroll";
+import React, { useRef } from "react";
 import {
   container,
   heading,
@@ -10,14 +9,6 @@ import {
 
 export default function Cover() {
   const titleRef = useRef(null);
-  const { scrollY } = useScroll();
-
-  useEffect(() => {
-    if (titleRef.current) {
-      // @ts-ignore
-      titleRef.current.style.marginLeft = `${scrollY * 2}px`;
-    }
-  }, [scrollY]);
 
   return (
     <article ref={titleRef} className={container}>

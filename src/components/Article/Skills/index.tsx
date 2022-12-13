@@ -2,60 +2,49 @@ import React from "react";
 import Reveal from "../../animations/Reveal";
 import SkillPieChart from "../../charts/SkillsPieChart";
 
-const options = {
-  root: null,
-  rootMargin: "0px",
-  threshold: 0,
-};
-
 export default function Skills() {
   return (
     <article
       className="column"
       // move to css module
       style={{
-        maxWidth: "400px",
+        width: "100%",
         paddingTop: "50px",
         paddingLeft: "20px",
         paddingRight: "20px",
       }}
     >
-      <div>
+      <Reveal
+        transition={{
+          from: ["hide-left"],
+          to: ["white", "animate-left-in", "pattaya"],
+        }}
+      >
+        <h1>Skills</h1>
         <Reveal
           transition={{
             from: ["hide-left"],
-            to: ["white", "animate-left-in", "pattaya"],
+            to: ["white", "animate-left-in-slow", "helvetica"],
           }}
-          options={options}
         >
-          <h1>Skills</h1>
-          <Reveal
-            transition={{
-              from: ["hide-left"],
-              to: ["white", "animate-left-in-slow", "helvetica"],
-            }}
-            options={options}
-          >
-            <div className="border-lime" />
-          </Reveal>
+          <div className="border-lime" />
         </Reveal>
-        <Reveal
-          transition={{
-            from: ["hide-left"],
-            to: ["white", "animate-left-in-slower", "helvetica"],
-          }}
-          options={options}
-        >
-          <p>
-            Building simple to use and easy to maintain APIs. Responsive and
-            engaging frontend interfaces with non-blocking user experience.
-            Designing and implementing adaptable and predictable data models
-            using high performance database technology. Configuring scalable web
-            servers in cloud based infrastructure
-          </p>
-        </Reveal>
-        <SkillPieChart />
-      </div>
+      </Reveal>
+      <Reveal
+        transition={{
+          from: ["hide-left"],
+          to: ["white", "animate-left-in-slower", "helvetica"],
+        }}
+      >
+        <p>
+          Building simple to use and easy to maintain APIs. Responsive and
+          engaging frontend interfaces with non-blocking user experience.
+          Designing and implementing adaptable and predictable data models using
+          high performance database technology. Configuring scalable web servers
+          in cloud based infrastructure
+        </p>
+      </Reveal>
+      <SkillPieChart />
       {/*
     subset
 */}
@@ -64,7 +53,6 @@ export default function Skills() {
           from: ["hide-left"],
           to: ["white", "animate-left-in", "pattaya"],
         }}
-        options={options}
       >
         <h2>Backend</h2>
         <Reveal
@@ -72,7 +60,6 @@ export default function Skills() {
             from: ["hide-left"],
             to: ["white", "animate-left-in-slow", "helvetica"],
           }}
-          options={options}
         >
           <div className="border-lime-medium" />
         </Reveal>
@@ -82,7 +69,6 @@ export default function Skills() {
           from: ["hide-left"],
           to: ["white", "animate-left-in-slower", "helvetica"],
         }}
-        options={options}
       >
         <p>
           Production ready APIs and web services with technologies such as
@@ -98,7 +84,6 @@ export default function Skills() {
           from: ["hide-left"],
           to: ["white", "animate-left-in", "pattaya"],
         }}
-        options={options}
       >
         <h2>Frontend</h2>
         <Reveal
@@ -106,7 +91,6 @@ export default function Skills() {
             from: ["hide-left"],
             to: ["white", "animate-left-in-slow", "helvetica"],
           }}
-          options={options}
         >
           <div className="border-lime-medium" />
         </Reveal>
@@ -116,7 +100,6 @@ export default function Skills() {
           from: ["hide-left"],
           to: ["white", "animate-left-in-slower", "helvetica"],
         }}
-        options={options}
       >
         <p>
           ReactJS professional equipped with advanced understanding JavaScript,
@@ -131,7 +114,6 @@ export default function Skills() {
           from: ["hide-left"],
           to: ["white", "animate-left-in", "pattaya"],
         }}
-        options={options}
       >
         <h2>Database</h2>
         <Reveal
@@ -139,7 +121,6 @@ export default function Skills() {
             from: ["hide-left"],
             to: ["white", "animate-left-in-slow", "helvetica"],
           }}
-          options={options}
         >
           <div className="border-lime-medium" />
         </Reveal>
@@ -149,7 +130,6 @@ export default function Skills() {
           from: ["hide-left"],
           to: ["white", "animate-left-in-slower", "helvetica"],
         }}
-        options={options}
       >
         <p>
           Data Modeling in with Postgres, SQL and creating production ready data
@@ -164,7 +144,6 @@ export default function Skills() {
           from: ["hide-left"],
           to: ["white", "animate-left-in", "pattaya"],
         }}
-        options={options}
       >
         <h2>Cloud</h2>
         <Reveal
@@ -172,7 +151,6 @@ export default function Skills() {
             from: ["hide-left"],
             to: ["white", "animate-left-in-slow", "helvetica"],
           }}
-          options={options}
         >
           <div className="border-lime-medium" />
         </Reveal>
@@ -182,7 +160,6 @@ export default function Skills() {
           from: ["hide-left"],
           to: ["white", "animate-left-in-slower", "helvetica"],
         }}
-        options={options}
       >
         <p>
           Deploying applications to productions environments on AWS, Azure and

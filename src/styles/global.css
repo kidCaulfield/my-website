@@ -90,6 +90,10 @@ p {
   align-items: flex-start;
 }
 
+.frame {
+  padding-top: 50px;
+}
+
 .helvetica {
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
 }

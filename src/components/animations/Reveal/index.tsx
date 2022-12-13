@@ -10,8 +10,7 @@ export default function Reveal({
 }: any) {
   const { from, to } = transition;
 
-  const callback = (entries: any) => {
-    const [entry] = entries;
+  const callback = (entry: any) => {
     const {
       target: { classList },
     } = entry;
@@ -24,7 +23,7 @@ export default function Reveal({
     }
   };
 
-  const [constainerRef]: any = useIntersectionObserver(options, callback);
+  const [constainerRef]: any = useIntersectionObserver(callback, options);
 
   return (
     <div ref={constainerRef} className={from} {...props}>

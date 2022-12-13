@@ -1,20 +1,29 @@
 import React from "react";
 import type { HeadFC, PageProps } from "gatsby";
 import "../styles/global.css";
-import IconSphere from "../components/animations/IconSphere";
 import Skills from "../components/Article/Skills";
 import Cover from "../components/Article/Cover";
 import Contact from "../components/Article/Contact";
+import IconSphere from "../components/animations/IconSphere";
+import HeroImage from "../components/HeroImage";
 
 const IndexPage: React.FC<PageProps> = () => {
   return (
     <main>
       <section id="hero" className="hero center">
-        <Cover />
+        <HeroImage>
+          <Cover />
+        </HeroImage>
       </section>
       <section id="skills" className="hero center">
         <div className="container">
           <Skills />
+          {/* <IconSphere radius={300} /> */}
+        </div>
+      </section>
+      <section id="technology" className="hero center">
+        <div className="center column frame">
+          <h1 className="white pattaya">Technology</h1>
           {/* <IconSphere radius={300} /> */}
         </div>
       </section>
