@@ -43,8 +43,6 @@ export default function SkillPieChart() {
             height={0}
             iconSize={36}
             formatter={(value) => {
-              console.log("value: ", value);
-
               return (
                 <span
                   style={{

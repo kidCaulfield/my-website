@@ -4,27 +4,29 @@ import "../styles/global.css";
 import Skills from "../components/Article/Skills";
 import Cover from "../components/Article/Cover";
 import Contact from "../components/Article/Contact";
+import HeroImage from "../components/images/HeroImage";
 import IconSphere from "../components/animations/IconSphere";
-import HeroImage from "../components/HeroImage";
+import { url } from "inspector";
 
 const IndexPage: React.FC<PageProps> = () => {
   return (
     <main>
-      <section id="hero" className="hero center">
+      <section id="hero" className="hero bg-black center">
         <HeroImage>
           <Cover />
         </HeroImage>
       </section>
-      <section id="skills" className="hero center">
+      <section id="skills" className="hero bg-black center">
         <div className="container">
           <Skills />
-          {/* <IconSphere radius={300} /> */}
         </div>
       </section>
-      <section id="technology" className="hero center">
-        <div className="center column frame">
+      <section id="technology" className="hero center bg-fixed">
+        <div className="center column frame ">
           <h1 className="white pattaya">Technology</h1>
-          {/* <IconSphere radius={300} /> */}
+          <div>
+            <IconSphere radius={400} />
+          </div>
         </div>
       </section>
       <Contact />
@@ -42,7 +44,6 @@ export const Head: HeadFC = () => (
       href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css"
     />
     <link
-      rel="preload"
       href="/fonts/pacifico/Pacifico.ttf"
       as="font"
       type="font/truetype"
@@ -50,7 +51,6 @@ export const Head: HeadFC = () => (
       key="pacifico"
     />
     <link
-      rel="preload"
       href="/fonts/pacifico/Pacifico-Regular.ttf"
       as="font"
       type="font/truetype"
@@ -58,13 +58,13 @@ export const Head: HeadFC = () => (
       key="pacifico-regular"
     />
     <link
-      rel="preload"
       href="/fonts/Pattaya/Pattaya-Regular.ttf"
       as="font"
       type="font/truetype"
       crossOrigin="anonymous"
       key="pattaya-regular"
     />
+    {/* <link rel="icon" type="image/x-icon" href="/images/favicon.ico"></link> */}
     <script src="https://kit.fontawesome.com/711dae3be5.js"></script>
   </>
 );

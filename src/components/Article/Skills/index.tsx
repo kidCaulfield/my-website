@@ -12,6 +12,7 @@ export default function Skills() {
         paddingTop: "50px",
         paddingLeft: "20px",
         paddingRight: "20px",
+        paddingBottom: "50px",
       }}
     >
       <Reveal
@@ -54,6 +55,36 @@ export default function Skills() {
           to: ["white", "animate-left-in", "pattaya"],
         }}
       >
+        <h2>Frontend</h2>
+        <Reveal
+          transition={{
+            from: ["hide-left"],
+            to: ["white", "animate-left-in-slow", "helvetica"],
+          }}
+        >
+          <div className="border-lime-medium" />
+        </Reveal>
+      </Reveal>
+      <Reveal
+        transition={{
+          from: ["hide-left"],
+          to: ["white", "animate-left-in-slower", "helvetica"],
+        }}
+      >
+        <p>
+          ReactJS professional equipped with advanced understanding JavaScript,
+          HTML and CSS
+        </p>
+      </Reveal>
+      {/*
+    subset
+*/}
+      <Reveal
+        transition={{
+          from: ["hide-left"],
+          to: ["white", "animate-left-in", "pattaya"],
+        }}
+      >
         <h2>Backend</h2>
         <Reveal
           transition={{
@@ -74,36 +105,6 @@ export default function Skills() {
           Production ready APIs and web services with technologies such as
           NodeJS, Serverless, AWS Lambda, Docker, third party API while
           constantly upgrading my tool box with the latest web technologies
-        </p>
-      </Reveal>
-      {/*
-    subset
-*/}
-      <Reveal
-        transition={{
-          from: ["hide-left"],
-          to: ["white", "animate-left-in", "pattaya"],
-        }}
-      >
-        <h2>Frontend</h2>
-        <Reveal
-          transition={{
-            from: ["hide-left"],
-            to: ["white", "animate-left-in-slow", "helvetica"],
-          }}
-        >
-          <div className="border-lime-medium" />
-        </Reveal>
-      </Reveal>
-      <Reveal
-        transition={{
-          from: ["hide-left"],
-          to: ["white", "animate-left-in-slower", "helvetica"],
-        }}
-      >
-        <p>
-          ReactJS professional equipped with advanced understanding JavaScript,
-          HTML and CSS
         </p>
       </Reveal>
       {/*

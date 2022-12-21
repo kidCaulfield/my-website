@@ -4,7 +4,7 @@ export default function Contact() {
   return (
     <section
       id="contact"
-      className="hero center column"
+      className="hero bg-black center column"
       style={{ justifyContent: "space-evenly" }}
     >
       <h1 className="white pacifico">Contact</h1>
