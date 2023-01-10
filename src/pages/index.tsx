@@ -5,8 +5,7 @@ import Skills from "../components/Article/Skills";
 import Cover from "../components/Article/Cover";
 import Contact from "../components/Article/Contact";
 import HeroImage from "../components/images/HeroImage";
-import IconSphere from "../components/animations/IconSphere";
-import { url } from "inspector";
+import DevIcons from "../components/DevIcons";
 
 const IndexPage: React.FC<PageProps> = () => {
   return (
@@ -25,7 +24,7 @@ const IndexPage: React.FC<PageProps> = () => {
         <div className="center column frame ">
           <h1 className="white pattaya">Technology</h1>
           <div>
-            <IconSphere radius={400} />
+            <DevIcons />
           </div>
         </div>
       </section>
@@ -64,7 +63,6 @@ export const Head: HeadFC = () => (
       crossOrigin="anonymous"
       key="pattaya-regular"
     />
-    {/* <link rel="icon" type="image/x-icon" href="/images/favicon.ico"></link> */}
     <script src="https://kit.fontawesome.com/711dae3be5.js"></script>
   </>
 );

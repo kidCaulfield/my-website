@@ -14,13 +14,16 @@ export const useIntersectionObserver = (
     threshold: 0,
   }
 ) => {
-  const [trigger, setTrigger] = useState();
+  const [trigger, setTrigger] = useState(false);
   const containerRef = useRef(null);
 
   const getRef = (entries: any) => {
     const [entry] = entries;
-    callback(entry);
-    if (entry.isIntersecting) setTrigger(true);
+    // use once
+    if (!trigger) {
+      callback(entry);
+      if (entry.isIntersecting) setTrigger(true);
+    }
   };
 
   useEffect(() => {

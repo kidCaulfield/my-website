@@ -15,7 +15,7 @@ export default function SkillPieChart() {
   const [constainerRef, trigger]: any = useIntersectionObserver();
 
   return (
-    <div ref={constainerRef}>
+    <div ref={constainerRef} className="display">
       {trigger ? (
         <PieChart width={400} height={400}>
           <Pie

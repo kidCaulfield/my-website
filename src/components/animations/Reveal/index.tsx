@@ -17,9 +17,6 @@ export default function Reveal({
     if (entry.isIntersecting) {
       classList.remove(...from);
       classList.add(...to);
-    } else {
-      classList.remove(...to);
-      classList.add(...from);
     }
   };
 

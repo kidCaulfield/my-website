@@ -76,12 +76,6 @@ p {
   align-items: center;
 }
 
-.center-top {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
 .column {
   display: flex;
   flex-direction: column;
@@ -139,13 +133,28 @@ p {
 }
 
 .bg-fixed {
-  /* The image used */
   background-image: url("../images/glacier-clouds.jpg");
-  /* Set a specific height */
-  min-height: 100vw;
+  min-height: 100vh;
+  min-width: 100vw;
   /* Create the parallax scrolling effect */
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+}
+
+.display {
+  display: block;
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  .display {
+    display: none;
+  }
+
+  h1 {
+    font-size: 18vw;
+    margin: 0px;
+  }
 }

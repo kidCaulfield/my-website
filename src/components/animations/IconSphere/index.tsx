@@ -2,13 +2,13 @@ import React, { useRef, useEffect } from "react";
 // @ts-ignore
 import TagCloud from "TagCloud";
 // @ts-ignore
-import { icon } from './iconSphere.module.css'
+import { icon } from "./iconSphere.module.css";
 
 type IconSphereProps = {
-  radius: number
-}
+  radius: number;
+};
 
-const IconSphere = ({radius}:IconSphereProps) => {
+const IconSphere = ({ radius }: IconSphereProps) => {
   const ref = useRef(null);
   const isTagCloudLoaded = useRef(false);
 
@@ -38,7 +38,6 @@ const IconSphere = ({radius}:IconSphereProps) => {
       `${icon} devicon-jest-plain`,
     ];
 
-
     if (isTagCloudLoaded.current && ref.current) return;
 
     TagCloud(".icon-sphere", Array(icons.length).fill(""), {
@@ -58,9 +57,9 @@ const IconSphere = ({radius}:IconSphereProps) => {
   }, []);
 
   return (
-      <section className="center">
-        <div ref={ref} className="icon-sphere"></div>
-      </section>
+    <section className="center">
+      <div ref={ref} className="icon-sphere"></div>
+    </section>
   );
 };
 

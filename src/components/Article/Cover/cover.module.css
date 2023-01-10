@@ -7,6 +7,7 @@
 
 .heading {
   color: white;
+  filter: drop-shadow(0 0 5px black);
   font-family: "Pacifico";
   font-weight: bold;
   font-size: 12vw;
@@ -31,7 +32,8 @@
 
 .typewriter h1 {
   overflow: hidden; /* Ensures the content is not revealed until the animation */
-  border-right: 0.15em solid lime; /* The typwriter cursor */
+  border-right: 0.15em solid white; /* The typwriter cursor */
+  filter: drop-shadow(0 0 5px black);
   white-space: nowrap; /* Keeps the content on a single line */
   margin: 0 auto; /* Gives that scrolling effect as the typing happens */
   letter-spacing: 0.15em; /* Adjust as needed */
@@ -40,7 +42,8 @@
 
 .typewriter-h1 {
   position: relative;
-  color: lime;
+  color: white;
+  filter: drop-shadow(0 0 5px black);
   font-family: "American Typewriter", Helvetica;
   font-size: 5vw;
   margin: 0px 0px 0px 0px;
@@ -64,6 +67,6 @@
     border-color: transparent;
   }
   50% {
-    border-color: lime;
+    border-color: white;
   }
 }
