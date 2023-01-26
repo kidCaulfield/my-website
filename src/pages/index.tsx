@@ -1,33 +1,30 @@
 import React from "react";
 import type { HeadFC, PageProps } from "gatsby";
 import "../styles/global.css";
-import Skills from "../components/Article/Skills";
-import Cover from "../components/Article/Cover";
-import Contact from "../components/Article/Contact";
-import HeroImage from "../components/images/HeroImage";
-import DevIcons from "../components/DevIcons";
+import Skills from "../components/section/Skills";
+import Cover from "../components/section/Cover";
+import Contact from "../components/section/Contact";
+import { StaticImage } from "gatsby-plugin-image";
+import Technology from "../components/section/Technology";
 
 const IndexPage: React.FC<PageProps> = () => {
   return (
     <main>
-      <section id="hero" className="hero bg-black center">
-        <HeroImage>
-          <Cover />
-        </HeroImage>
-      </section>
-      <section id="skills" className="hero bg-black center">
-        <div className="container">
-          <Skills />
-        </div>
-      </section>
-      <section id="technology" className="hero center bg-fixed">
-        <div className="center column frame ">
-          <h1 className="white pattaya">Technology</h1>
-          <div>
-            <DevIcons />
-          </div>
-        </div>
-      </section>
+      <StaticImage
+        style={{
+          position: "fixed",
+          height: "100vh",
+          zIndex: -1,
+        }}
+        src="../images/glacier-clouds.jpg"
+        alt="glacier-clouds"
+        placeholder="none"
+        objectFit="cover"
+        loading="lazy"
+      />
+      <Cover />
+      <Skills />
+      <Technology />
       <Contact />
     </main>
   );
@@ -37,7 +34,7 @@ export default IndexPage;
 
 export const Head: HeadFC = () => (
   <>
-    <title>Home Page</title>
+    <title>Wes Coderre</title>
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css"

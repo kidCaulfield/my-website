@@ -1,6 +1,6 @@
 import React from "react";
 // @ts-ignore
-import { icon } from "./dev-icons.module.css";
+import { icon, container } from "./dev-icons.module.css";
 
 const DevIcons = () => {
   const icons = [
@@ -29,7 +29,7 @@ const DevIcons = () => {
   ];
 
   return (
-    <section className="center container" style={{ maxWidth: "1000px" }}>
+    <section className={`center ${container}`}>
       {icons.map((val) => (
         <div key={val} className={`${icon} ${val}`} />
       ))}

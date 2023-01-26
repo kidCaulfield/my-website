@@ -56,15 +56,19 @@ p {
   background-color: black;
 }
 
-.border-lime {
-  border: 5px solid lime;
+.bg-white {
+  background-color: white;
+}
+
+.border-blue {
+  border: 5px solid #2d5986;
   border-radius: 5px;
   max-width: 500px;
   margin-top: -20px;
 }
 
-.border-lime-medium {
-  border: 3px solid lime;
+.border-blue-medium {
+  border: 3px solid #2d5986;
   border-radius: 3px;
   max-width: 500px;
   margin-top: -20px;
@@ -88,6 +92,10 @@ p {
   align-items: flex-start;
 }
 
+.drop-shadow {
+  filter: drop-shadow(0 0 5px black);
+}
+
 .frame {
   padding-top: 50px;
 }
@@ -97,12 +105,9 @@ p {
 }
 
 .hero {
-  display: flex;
-  flex-wrap: wrap;
+  border: 0px;
   min-height: 100vh;
   min-width: 100vw;
-  border: 0px;
-  /* background-color: black; */
 }
 
 .pacifico {
@@ -117,31 +122,7 @@ p {
   color: white;
 }
 
-.lime {
-  color: lime;
-}
-
-/* Contacts */
-
-.link {
-  font-size: 5rem;
-  color: white;
-}
-
-.link:hover {
-  color: Lime;
-}
-
-.bg-fixed {
-  background-image: url("../images/glacier-clouds.jpg");
-  min-height: 100vh;
-  min-width: 100vw;
-  /* Create the parallax scrolling effect */
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
+/*Skills*/
 
 .display {
   display: block;
