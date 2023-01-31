@@ -1,8 +1,8 @@
 .icon {
-  color: #4080bf;
+  color: white;
   font-size: 100px;
   margin: 20px;
-  filter: drop-shadow(0 0 2px rgb(255, 255, 255, 0.2));
+  filter: drop-shadow(0 0 2px black);
 }
 
 .container {

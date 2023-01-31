@@ -29,11 +29,11 @@ const DevIcons = () => {
   ];
 
   return (
-    <section className={`center ${container}`}>
+    <article className={`center ${container}`}>
       {icons.map((val) => (
         <div key={val} className={`${icon} ${val}`} />
       ))}
-    </section>
+    </article>
   );
 };
 
