@@ -1,7 +1,13 @@
 import React from "react";
 import Reveal from "../../animations/Reveal";
 
-export default function Blurb({ title, className, description }: any) {
+type BlurbProps = {
+  title: JSX.Element;
+  className: string;
+  description: string;
+};
+
+export default function Blurb({ title, className, description }: BlurbProps) {
   return (
     <>
       <Reveal
